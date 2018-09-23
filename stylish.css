@@ -15,6 +15,8 @@ body, html {
 	line-height: 5;
 	background: radial-gradient( #212121, black);
 	align-items: center;
+	position: relative;
+	z-index: 2;
 
 }
 .item {
@@ -27,10 +29,106 @@ body, html {
 .item-1 {
 	color: #00c853;
 }
+#header-image {
+	height: 300px;
+	position: relative;
+	width: 100%;
+}
+#imghead {
+	position: absolute;
+	height: inherit;
+	width: inherit;
+}
+.animHead {
+	width: 300px;
+	height: auto;
+	background-color: lightgray;
+	margin-left: -225px;
+	box-shadow: 10px 10px 10px gray;
+	font-family: sans-serif;
+	transform: rotate(90deg);
+	margin-top: 75px;
+	position: fixed;
+	z-index:5;
+	transition: 0.5s ease-out;
+	text-align: center;
+}
+#head-about {
+	background-color: green;
+	color: #ffffff;
+	text-align: center;
+	cursor: pointer;
+	margin-top:0px;
+
+}
+.open-about {
+	transform: rotate(-360deg);
+	margin-left: 5px;
+	margin-top:0px;
+	z-index: 5;
+}
+#content-about {
+	font-family: cursive;
+}
+#mind-map {
+	width: 700px;
+}
+
+.container-grid1 {
+	margin-left: 300px;
+	display: grid;
+	grid-template-columns: 700px;
+	grid-template-rows: 100px 400px 200px;
+	grid-template-areas: 
+	"headText"
+	"mindImage"
+	"mindArticle";
+	
+}
+.head-text {
+	grid-area: headText;
+	font-family: fantasy;
+}
+.mind-image {
+	grid-area: mindImage;
+}
+.mind-article {
+	grid-area: mindArticle;
+}
+.head-text-map {
+	text-align: center;
+}
+#mind-post {
+	font-family: cursive;
+}
+#light {
+	width: 700px;
+	height: 50px;
+	margin-left: 300px;
+	background-color: yellow;
+	box-shadow: 0px 50px 100px 100px yellow;
+}
 @media screen and (max-width: 580px) {
 	.navbar {
 		display: block;
 		height: auto;
 		text-align: center;
+	}
+}
+.head-text-plans {
+	text-align: center;
+	font-family: fantasy;
+}
+@media screen and (max-width: 700px) {
+	.container-grid1 {
+		display: block;
+		margin-left:0px;
+	}
+	#mind-map {
+		width: 380px;
+	}
+	#light {
+		margin-left:0px;
+		width: 300px;
 	}
 }
